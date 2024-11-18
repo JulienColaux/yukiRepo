@@ -7,9 +7,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GestionRapports.DB", "Gesti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionsRapports.DAL", "GestionsRapports.DAL\GestionsRapports.DAL.csproj", "{A1264DBA-1288-4AE0-89F8-30FE901A1DB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionRapports.BLL", "GestionRapports.BLL\GestionRapports.BLL.csproj", "{1335769B-683E-4A33-B430-78C8219E5C66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionRapports.BLL", "GestionRapports.BLL\GestionRapports.BLL.csproj", "{1335769B-683E-4A33-B430-78C8219E5C66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionRapports.API", "GestionRapports.API\GestionRapports.API.csproj", "{5310A624-4025-4C29-AB26-A73B850FC37F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionRapports.API", "GestionRapports.API\GestionRapports.API.csproj", "{5310A624-4025-4C29-AB26-A73B850FC37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionRapports.MAP", "GestionRapports.MAP\GestionRapports.MAP.csproj", "{A226982A-1BDE-4007-BBFB-568FF267A690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{5310A624-4025-4C29-AB26-A73B850FC37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5310A624-4025-4C29-AB26-A73B850FC37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5310A624-4025-4C29-AB26-A73B850FC37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A226982A-1BDE-4007-BBFB-568FF267A690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A226982A-1BDE-4007-BBFB-568FF267A690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A226982A-1BDE-4007-BBFB-568FF267A690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A226982A-1BDE-4007-BBFB-568FF267A690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
