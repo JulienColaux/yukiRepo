@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\GestionRapports\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5310A624-4025-4C29-AB26-A73B850FC37F}|GestionRapports.API\\GestionRapports.API.csproj|c:\\users\\student\\documents\\gestionrapports\\gestionrapports.api\\gestionrapports.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5310A624-4025-4C29-AB26-A73B850FC37F}|GestionRapports.API\\GestionRapports.API.csproj|solutionrelative:gestionrapports.api\\gestionrapports.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1335769B-683E-4A33-B430-78C8219E5C66}|GestionRapports.BLL\\GestionRapports.BLL.csproj|c:\\users\\student\\documents\\gestionrapports\\gestionrapports.bll\\gestionrapports.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1335769B-683E-4A33-B430-78C8219E5C66}|GestionRapports.BLL\\GestionRapports.BLL.csproj|solutionrelative:gestionrapports.bll\\gestionrapports.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1335769B-683E-4A33-B430-78C8219E5C66}|GestionRapports.BLL\\GestionRapports.BLL.csproj|c:\\users\\student\\documents\\gestionrapports\\gestionrapports.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1335769B-683E-4A33-B430-78C8219E5C66}|GestionRapports.BLL\\GestionRapports.BLL.csproj|solutionrelative:gestionrapports.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1264DBA-1288-4AE0-89F8-30FE901A1DB3}|GestionsRapports.DAL\\GestionsRapports.DAL.csproj|c:\\users\\student\\documents\\gestionrapports\\gestionsrapports.dal\\gestionsrapports.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1264DBA-1288-4AE0-89F8-30FE901A1DB3}|GestionsRapports.DAL\\GestionsRapports.DAL.csproj|solutionrelative:gestionsrapports.dal\\gestionsrapports.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1264DBA-1288-4AE0-89F8-30FE901A1DB3}|GestionsRapports.DAL\\GestionsRapports.DAL.csproj|c:\\users\\student\\documents\\gestionrapports\\gestionsrapports.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1264DBA-1288-4AE0-89F8-30FE901A1DB3}|GestionsRapports.DAL\\GestionsRapports.DAL.csproj|solutionrelative:gestionsrapports.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestionRapports.API",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.API\\GestionRapports.API.csproj",
+              "RelativeDocumentMoniker": "GestionRapports.API\\GestionRapports.API.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.API\\GestionRapports.API.csproj",
+              "RelativeToolTip": "GestionRapports.API\\GestionRapports.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-18T13:48:25.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionRapports.BLL",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.BLL\\GestionRapports.BLL.csproj",
+              "RelativeDocumentMoniker": "GestionRapports.BLL\\GestionRapports.BLL.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.BLL\\GestionRapports.BLL.csproj",
+              "RelativeToolTip": "GestionRapports.BLL\\GestionRapports.BLL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-18T13:47:11.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "GestionRapports.BLL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.BLL\\Class1.cs",
+              "RelativeToolTip": "GestionRapports.BLL\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T13:46:59.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GestionsRapports.DAL",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionsRapports.DAL\\GestionsRapports.DAL.csproj",
+              "RelativeDocumentMoniker": "GestionsRapports.DAL\\GestionsRapports.DAL.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionsRapports.DAL\\GestionsRapports.DAL.csproj",
+              "RelativeToolTip": "GestionsRapports.DAL\\GestionsRapports.DAL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-18T13:44:52.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionsRapports.DAL\\Class1.cs",
+              "RelativeDocumentMoniker": "GestionsRapports.DAL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionsRapports.DAL\\Class1.cs",
+              "RelativeToolTip": "GestionsRapports.DAL\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T13:42:35.74Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
