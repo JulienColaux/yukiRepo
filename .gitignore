@@ -5,6 +5,8 @@
 
 # Ignorer tous les fichiers et sous-dossiers dans obj/Debug/net8.0
 obj/Debug/net8.0/
+obj/
+*.cache
 
 # Ignorer les fichiers avec l'extension .DB.jfm
 *.DB.jfm
