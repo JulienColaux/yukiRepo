@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './features/login/login/login.component';
 import { HomeComponent } from './features/home/home/home.component';
 import { AddReportComponent } from './features/add-report/add-report/add-report.component';
-import { CheckReportComponent } from './features/check-report/check-report/check-report.component';
 
 const routes: Routes = [
   {
@@ -14,9 +13,6 @@ const routes: Routes = [
   },
   {
     path: 'addReport', component: AddReportComponent
-  },
-  {
-    path: 'checkReport', component: CheckReportComponent
   }
 ];
 
@@ -24,4 +20,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
