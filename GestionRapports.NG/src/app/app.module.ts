@@ -10,12 +10,15 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
 import { TableModule } from 'primeng/table';
 import { MessagesModule } from 'primeng/messages';
-
+import { LoginModule } from './features/login/login.module';
+import { HomeModule } from './features/home/home.module';
+import { LoginService } from './core/services/login.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,10 @@ import { MessagesModule } from 'primeng/messages';
     DropdownModule,
     FileUploadModule,
     TableModule,
-    MessagesModule
+    MessagesModule,
+    LoginModule,
+    HomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
