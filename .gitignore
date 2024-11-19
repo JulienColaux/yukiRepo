@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Ignorer tous les fichiers et sous-dossiers dans obj/Debug/net8.0
+obj/Debug/net8.0/
+
+# Ignorer les fichiers avec l'extension .DB.jfm
+*.DB.jfm
+
 # User-specific files
 *.rsuser
 *.suo
