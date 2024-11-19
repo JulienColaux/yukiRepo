@@ -14,11 +14,12 @@ import { LoginModule } from './features/login/login.module';
 import { HomeModule } from './features/home/home.module';
 import { LoginService } from './core/services/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddReportModule } from './features/add-report/add-report.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     MessagesModule,
     LoginModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    AddReportModule
   ],
   providers: [],
   bootstrap: [AppComponent]
