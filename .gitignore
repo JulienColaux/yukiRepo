@@ -24,3 +24,5 @@ project.assets.json
 !**/obj/**/GestionRapports.DAL.csproj.nuget.dgspec.json
 !**/obj/**/GestionRapports.DAL.csproj.nuget.g.props
 !**/obj/**/GestionRapports.DAL.csproj.nuget.g.targets
+
+
