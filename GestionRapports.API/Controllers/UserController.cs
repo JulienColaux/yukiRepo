@@ -1,31 +1,46 @@
+using GestionRapports.API.DTOs;
+using GestionRapports.API.Mappers;
+using GestionRapports.BLL.Exceptions;
+using GestionRapports.BLL.Interfaces;
+using GestionRapports.BLL.Models;
 using Microsoft.AspNetCore.Mvc;
-namespace GestionRapports.API.Controllers;
-[ApiController]
-[Route("api/pdf")]
-public class UploadController : ControllerBase
+
+namespace GestionRapports.API.Controllers
 {
-    [HttpPost("upload")]
-    public async Task<IActionResult> UploadFile(IFormFile file)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController(IUserService service) : ControllerBase
     {
-        if (file == null || file.Length == 0)
+        /// <summary>
+        /// Retrieves a user from the database by ID.
+        /// </summary>
+        /// <param name="id">ID to retrieve.</param>
+        /// <returns>The user object if found; otherwise, null.</returns>
+        [HttpGet("id")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(User))]
+        public IActionResult GetUserById(int id)
         {
-            Console.WriteLine("No file uploaded.");
-            return BadRequest("No file uploaded.");
-        }
-        try
-        {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles", file.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            try
             {
-                await file.CopyToAsync(stream);
+                // Vérify errors
+                if (id <= 0) throw new NegativeNumberException("ID doit être positif");
+                if (!service.CheckUserExistance(id)) throw new NotFoundException("L'utilisateur n'a pas été trouvé");
+
+                UserDTO result = service.GetUserById(id).ToDTO();
+                return Ok(result);
             }
-            Console.WriteLine("File uploaded successfully at: " + filePath);
-            return Ok(new { message = "File uploaded successfully", filePath });
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error during file upload: " + ex.Message);
-            return StatusCode(500, "Internal server error");
+            catch (NegativeNumberException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
     }
 }
