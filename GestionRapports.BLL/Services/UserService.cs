@@ -17,18 +17,39 @@ namespace GestionRapports.BLL.Services
         /// </summary>
         /// <param name="id">ID to retrieve.</param>
         /// <returns>The user object if found; otherwise, null.</returns>
-    public User GetUserById(int id)
-    {
-        return repo.GetUserById(id).ToModel();
+        public User GetUserById(int id)
+        {
+            return repo.GetUserById(id).ToModel();
+        }
+
+        /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        /// <param name="id">Email to retrieve.</param>
+        /// <returns>The user object if found; otherwise, null.</returns>
+        public User GetUserByEmail(string email)
+        {
+            return repo.GetUserByEmail(email).ToModel();
+        }
+
+        /// <summary>
+        /// Checks whether a user exists in the database based on ID.
+        /// </summary>
+        /// <param name="id">ID to check.</param>
+        /// <returns>True if the user exists; otherwise, false.</returns>
+        public bool CheckUserExistance(int id)
+        {
+            return repo.CheckUserExistance(id);
+        }
+
+        /// <summary>
+        /// Checks whether a user exists in the database based on Email.
+        /// </summary>
+        /// <param name="id">Email to check.</param>
+        /// <returns>True if the user exists; otherwise, false.</returns>
+        public bool CheckUserExistance(string email)
+        {
+            return repo.CheckUserExistance(email);
+        }
     }
-    /// <summary>
-    /// Checks whether a user exists in the database based on ID.
-    /// </summary>
-    /// <param name="id">ID to check.</param>
-    /// <returns>True if the user exists; otherwise, false.</returns>
-    public bool CheckUserExistance(int id)
-    {
-        return repo.CheckUserExistance(id);
-    }
-}
 }

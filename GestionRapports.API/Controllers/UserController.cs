@@ -42,5 +42,32 @@ namespace GestionRapports.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        /// <param name="id">Email to retrieve.</param>
+        /// <returns>The user object if found; otherwise, null.</returns>
+        [HttpGet("email")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(User))]
+        public IActionResult GetUserByEmail(string email)
+        {
+            try
+            {
+                // Vérify errors
+                if (!service.CheckUserExistance(email)) throw new NotFoundException("L'utilisateur n'a pas été trouvé");
+
+                UserDTO result = service.GetUserByEmail(email).ToDTO();
+                return Ok(result);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }

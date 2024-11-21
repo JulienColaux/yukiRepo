@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
 using GestionRapports.API.Forms;
-using DTO = GestionRapports.API.DTOs;
+using GestionRapports.API.DTOs;
 using Models = GestionRapports.BLL.Models;
 
 namespace GestionRapports.API.Mappers
 {
     public static class UserMapper
     {
-        public static DTO.UserDTO ToDTO(this Models.User u)
+        public static UserDTO ToDTO(this Models.User u)
         {
-            return new DTO.UserDTO
+            return new UserDTO
             {
                 User_Id = u.User_Id,
                 Email = u.Email,
