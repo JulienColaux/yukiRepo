@@ -49,7 +49,14 @@ namespace GestionRapports.API.Mappers
             };
         }
         
-        
+        public static Models.User ToModel(this UserLoginForm u)
+        {
+            return new Models.User
+            {
+                Email = u.Email,
+                Password = u.MotsDePasse
+            };
+        }
         
         public static Models.User Tomodels(this UserForm u)
         {
