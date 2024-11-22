@@ -15,6 +15,7 @@ import { HomeModule } from './features/home/home.module';
 import { LoginService } from './core/services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AddReportModule } from './features/add-report/add-report.module';
+import { CheckReportModule } from './features/check-report/check-report.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AddReportModule } from './features/add-report/add-report.module';
     LoginModule,
     HomeModule,
     HttpClientModule,
-    AddReportModule
+    AddReportModule,
+    CheckReportModule
   ],
   providers: [],
   bootstrap: [AppComponent]

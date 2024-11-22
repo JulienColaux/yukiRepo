@@ -1,2 +1,37 @@
-
+<!-- app.component.html -->
+<div>
+    <label for="categorie">Choisir une catégorie de tri:  </label>
+    <select id="categorie" [(ngModel)]="categorie">
+      <option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </option>
+    </select>
+  </div>
+  
+  <p>Catégorie sélectionnée (check) : {{ categorie }}</p>
+  
+  <label for="userInput">Choisissez </label>
+  <input type="text" id="userInput" [(ngModel)]="userInput" placeholder="entrez ... ">
+  
+  <button (click)="submitValue()">Rechercher</button>
+  <div>
+    <p>Resultat pour le mot clé {{userInput}}</p>
+  </div>
+  
+  <!-- Si la liste "listReport" contient des éléments -->
+  <div *ngIf="listReport.length > 0; else pasDeDonnees">
+    <ul>
+      <!-- Parcourt chaque élément de la liste et affiche son nom -->
+      <li *ngFor="let item of filteredReport">
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Si la liste est vide -->
+  <ng-template #pasDeDonnees>
+    <p>Aucune donnée disponible.</p>
+  </ng-template>
+  
+  
   
