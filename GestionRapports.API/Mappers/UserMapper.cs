@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using GestionRapports.API.Forms;
 using GestionRapports.API.DTOs;
+using GestionsRapports.DAL.Entities;
 using Models = GestionRapports.BLL.Models;
 
 namespace GestionRapports.API.Mappers
@@ -16,22 +17,41 @@ namespace GestionRapports.API.Mappers
                 Password = u.Password,
                 Firstname = u.Firstname,
                 Lastname = u.Lastname,
-                Role = u.Role,
+                Profil = u.Profil,
                 Phone = u.Phone,
-
+                
             };
         }
-
-
-        public static Models.User Tomodels(this UserForm u)
+        
+        public static UserCreateDTO ToDTO(this CreateUserForm u)
+        {
+            return new UserCreateDTO
+            {
+                Email = u.Email,
+                Password = u.Password,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
+                Profil = u.Profil,
+                Phone = u.Phone,
+            };
+        }
+        
+        public static Models.User ToModel(this CreateUserForm u)
         {
             return new Models.User
             {
                 Email = u.Email,
-                Password = u.MotsDePasse
+                Password = u.Password,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
+                Profil = u.Profil,
+                Phone = u.Phone,
             };
         }
-        public static Models.User ToModel(this UserLoginForm u)
+        
+        
+        
+        public static Models.User Tomodels(this UserForm u)
         {
             return new Models.User
             {

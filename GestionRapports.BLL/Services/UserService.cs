@@ -14,6 +14,7 @@ namespace GestionRapports.BLL.Services
 {
     public class UserService(IUserRepository repo, IAuthService authService) : IUserService
     {
+        
         /// <summary>
         /// Retrieves a user from the database by ID.
         /// </summary>
@@ -22,6 +23,30 @@ namespace GestionRapports.BLL.Services
         public User GetUserById(int id)
         {
             return repo.GetUserById(id).ToModel();
+        }
+
+        public User CreateUser(User user)
+        {
+            if (user == null | string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
+            {
+                new Exception("Email or password is incorrect.");
+            }
+
+            if (repo.CheckUserExistance(user.Email))
+            {
+                new Exception("Email already exists.");
+            }
+            
+            string passwordHash = Argon2.Hash(user.Password);
+            user.Password = passwordHash;
+            
+            Console.WriteLine(user.Profil.ToString());
+
+            string Profil = user.Profil.ToString(); 
+    
+            GestionsRapports.DAL.Entities.User userEntity = repo.CreateUser(user.ToEntity(), Profil);
+            
+            return userEntity.ToModel();
         }
 
         /// <summary>

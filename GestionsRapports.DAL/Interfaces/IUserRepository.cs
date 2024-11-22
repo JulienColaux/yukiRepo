@@ -10,11 +10,21 @@ namespace GestionsRapports.DAL.Interfaces
     public interface IUserRepository
     {
         /// <summary>
+        /// Add a new user in the database
+        /// </summary>
+        /// <param name="user">User to add.</param>
+        public User CreateUser(User user, string roleValue);
+        
+        
+        
+        /// <summary>
         /// Retrieves a user from the database by ID.
         /// </summary>
         /// <param name="id">ID to retrieve.</param>
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserById(int id);
+        
+        
 
         /// <summary>
         /// Retrieves a user from the database by Email.
@@ -22,6 +32,8 @@ namespace GestionsRapports.DAL.Interfaces
         /// <param name="id">Email to retrieve.</param>
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserByEmail(string email);
+        
+        
 
         /// <summary>
         /// Checks whether a user exists in the database based on ID.
@@ -30,6 +42,8 @@ namespace GestionsRapports.DAL.Interfaces
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(int id);
 
+        
+        
         /// <summary>
         /// Checks whether a user exists in the database based on Email.
         /// </summary>

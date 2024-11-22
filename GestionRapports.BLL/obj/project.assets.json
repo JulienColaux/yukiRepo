@@ -2115,7 +2115,8 @@
     "net8.0": [
       "GestionsRapports.DAL >= 1.0.0",
       "Isopoh.Cryptography.Argon2 >= 2.0.0",
-      "Microsoft.Extensions.Configuration.Abstractions >= 9.0.0"
+      "Microsoft.Extensions.Configuration.Abstractions >= 9.0.0",
+      "Npgsql >= 9.0.1"
     ]
   },
   "packageFolders": {
@@ -2179,6 +2180,10 @@
           "Microsoft.Extensions.Configuration.Abstractions": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Npgsql": {
+            "target": "Package",
+            "version": "[9.0.1, )"
           }
         },
         "imports": [

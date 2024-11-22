@@ -41,6 +41,41 @@ namespace GestionRapports.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+        
+        
+        
+        [HttpPost("register")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(UserDTO))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public IActionResult CreateUser([FromBody] CreateUserForm user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                // Conversion directe du formulaire en modèle métier
+                User userModel = user.ToModel();
+
+                // Appel du service pour la création
+                User createdUser = service.CreateUser(userModel);
+
+                // Conversion du modèle créé en DTO pour la réponse
+                UserDTO userDTO = createdUser.ToDTO();
+
+                // Retourne un status 201 avec l'objet créé
+                return CreatedAtAction(nameof(GetUserById), new { id = userDTO.User_Id }, userDTO);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        
+        
 
         [Authorize]
         [HttpGet("email")]

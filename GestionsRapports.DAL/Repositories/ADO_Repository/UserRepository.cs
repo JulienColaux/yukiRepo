@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Common;
 using Dapper;
 using GestionsRapports.DAL.Entities;
 using GestionsRapports.DAL.Interfaces;
@@ -13,14 +10,28 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
 {
     public class UserRepository : IUserRepository
     {
-        private readonly NpgsqlConnection  connection;
+        private readonly NpgsqlConnection  _connection;
 
-        // Constructeur pour initialiser la connexion
+        // Constructeur pour initialiser la connexion par injection de dépendance
         public UserRepository(string connectionString)
         {
-            connection = new NpgsqlConnection (connectionString);
+            _connection = new NpgsqlConnection (connectionString);
         }
 
+        // Mapper de User 
+        public static User Mapper(User user)
+        {
+            return new User
+            {
+                User_Id = user.User_Id,
+                Firstname = user.Firstname,  
+                Lastname = user.Lastname,
+                Email = user.Email,
+                Phone = user.Phone,
+                Password = user.Password,
+                Profil = user.Profil 
+            };
+        }
 
         /// <summary>
         /// Retrieves a user from the database by ID.
@@ -29,7 +40,7 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserById(int id)
         {
-            var user = connection.QueryFirstOrDefault<User>(
+            var user = _connection.QueryFirstOrDefault<User>(
                 "SELECT " +
                 "id_utilisateur AS User_Id, " +
                 "prenom AS Firstname, " +
@@ -37,7 +48,7 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
                 "mail AS Email, " +
                 "numerotelephone AS Phone, " +
                 "motdepasse AS Password, " +
-                "profil AS Role " +
+                "profil AS Profil " +
                 "FROM utilisateur WHERE id_utilisateur = @Id", 
                 new { id });
 
@@ -48,11 +59,11 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <summary>
         /// Retrieves a user from the database by Email.
         /// </summary>
-        /// <param name="id">Email to retrieve.</param>
+        /// <param name="email">Email to retrieve.</param>
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserByEmail(string email)
         {
-            var user = connection.QueryFirstOrDefault<User>(
+            var user = _connection.QueryFirstOrDefault<User>(
                 "SELECT " +
                 "id_utilisateur AS User_Id, " +
                 "prenom AS Firstname, " +
@@ -60,13 +71,37 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
                 "mail AS Email, " +
                 "numerotelephone AS Phone, " +
                 "motdepasse AS Password, " +
-                "profil AS Role " +
+                "profil AS Profil " +
                 "FROM utilisateur WHERE mail = @email", 
                 new { email });
 
             return user;
         }
 
+
+        public User CreateUser(User user, string profil)
+        {
+            var sql = "INSERT INTO utilisateur (prenom, nom, mail, numerotelephone, motdepasse, profil)" +
+                          "VALUES (@Firstname, @Lastname, @Email, @Phone, @Password, @Profil) " +
+                          "RETURNING "+
+                        "id_utilisateur AS User_Id, " +
+                        "prenom AS Firstname, " +
+                        "nom AS Lastname, " +
+                        "mail AS Email, " +
+                        "numerotelephone AS Phone, " +
+                        "motdepasse AS Password, " +
+                        "profil AS Profil ";
+            
+            return _connection.QueryFirstOrDefault<User>(sql, new
+            {
+                Firstname = user.Firstname,
+                Lastname = user.Lastname,
+                Email = user.Email,
+                Phone = user.Phone,
+                Password = user.Password,
+                Profil = profil 
+            });
+        }
 
         /// <summary>
         /// Checks whether a user exists in the database based on ID.
@@ -75,17 +110,17 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(int id)
         {
-            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM \"utilisateur\" WHERE \"id_utilisateur\" = @Id", new { id });
+            return 1 <= _connection.ExecuteScalar<int>("SELECT COUNT(*) FROM utilisateur WHERE id_utilisateur = @Id", new { id });
         }
 
         /// <summary>
         /// Checks whether a user exists in the database based on Email.
         /// </summary>
-        /// <param name="id">Email to check.</param>
+        /// <param name="email">Email to check.</param>
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(string email)
         {
-            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM \"utilisateur\" WHERE \"mail\" = @Email", new { email });
+            return 1 <= _connection.ExecuteScalar<int>("SELECT COUNT(*) FROM utilisateur WHERE mail = @Email", new { email });
         }
     }
 }

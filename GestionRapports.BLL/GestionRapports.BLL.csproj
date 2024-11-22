@@ -15,4 +15,9 @@
     <ProjectReference Include="..\GestionsRapports.DAL\GestionsRapports.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Isopoh.Cryptography.Argon2" Version="2.0.0" />
+    <PackageReference Include="Npgsql" Version="9.0.1" />
+  </ItemGroup>
+
 </Project>

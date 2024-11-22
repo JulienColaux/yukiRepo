@@ -10,6 +10,13 @@ namespace GestionRapports.BLL.Interfaces
     public interface IUserService
     {
         /// <summary>
+        /// Add a new user in the database
+        /// </summary>
+        /// <param name="user">User to add.</param>
+        public User CreateUser(User user);
+        
+        
+        /// <summary>
         /// Retrieves a user from the database by ID.
         /// </summary>
         /// <param name="id">ID to retrieve.</param>

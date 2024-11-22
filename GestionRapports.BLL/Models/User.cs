@@ -14,6 +14,6 @@ namespace GestionRapports.BLL.Models
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;
-        public Role Role { get; set; }
+        public Profil Profil { get; set; }
     }   
 }

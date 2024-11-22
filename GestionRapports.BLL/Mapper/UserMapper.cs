@@ -19,7 +19,7 @@ namespace GestionRapports.BLL.Mappers
                 Lastname = u.Lastname,
                 Email = u.Email,
                 Password = u.Password,
-                Role = u.Role,
+                Profil = u.Profil,
                 Phone = u.Phone,
             };
         }
@@ -32,7 +32,7 @@ namespace GestionRapports.BLL.Mappers
                 Lastname = u.Lastname,
                 Email = u.Email,
                 Password = u.Password,
-                Role = u.Role,
+                Profil = u.Profil,
                 Phone = u.Phone,
             };
         }
