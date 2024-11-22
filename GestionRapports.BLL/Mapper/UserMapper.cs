@@ -15,8 +15,12 @@ namespace GestionRapports.BLL.Mappers
             return new Models.User
             {
                 User_Id = u.User_Id,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
                 Email = u.Email,
-                MotsDePasse = u.MotsDePasse
+                Password = u.Password,
+                Role = u.Role,
+                Phone = u.Phone,
             };
         }
         public static Entities.User ToEntity(this Models.User u)
@@ -24,8 +28,12 @@ namespace GestionRapports.BLL.Mappers
             return new Entities.User
             {
                 User_Id = u.User_Id,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
                 Email = u.Email,
-                MotsDePasse = u.MotsDePasse
+                Password = u.Password,
+                Role = u.Role,
+                Phone = u.Phone,
             };
         }
     }

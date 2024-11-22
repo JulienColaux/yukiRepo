@@ -1,8 +1,10 @@
 using GestionRapports.API.DTOs;
+using GestionRapports.API.Forms;
 using GestionRapports.API.Mappers;
 using GestionRapports.BLL.Exceptions;
 using GestionRapports.BLL.Interfaces;
 using GestionRapports.BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestionRapports.API.Controllers
@@ -11,11 +13,8 @@ namespace GestionRapports.API.Controllers
     [ApiController]
     public class UserController(IUserService service) : ControllerBase
     {
-        /// <summary>
-        /// Retrieves a user from the database by ID.
-        /// </summary>
-        /// <param name="id">ID to retrieve.</param>
-        /// <returns>The user object if found; otherwise, null.</returns>
+        
+        [Authorize]
         [HttpGet("id")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(User))]
         public IActionResult GetUserById(int id)
@@ -43,11 +42,7 @@ namespace GestionRapports.API.Controllers
             }
         }
 
-        /// <summary>
-        /// Retrieves a user from the database by Email.
-        /// </summary>
-        /// <param name="id">Email to retrieve.</param>
-        /// <returns>The user object if found; otherwise, null.</returns>
+        [Authorize]
         [HttpGet("email")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(User))]
         public IActionResult GetUserByEmail(string email)
@@ -67,6 +62,33 @@ namespace GestionRapports.API.Controllers
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        
+        [HttpPost("login")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public IActionResult Login([FromBody] UserLoginForm user)
+        {
+            try
+            {
+                var loginResult = service.Login(user.ToModel());
+                
+                // returns a login result containing the user details and a JWT token (User's Email, Expiration date)
+                return Ok(new
+                {
+                    token = loginResult.Token,
+                    userId = loginResult.User.User_Id,
+                    email = loginResult.User.Email,
+                });
+            }
+            catch (CredentialException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }

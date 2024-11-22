@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestionRapports.BLL.Exceptions;
 using GestionRapports.BLL.Interfaces;
 using GestionRapports.BLL.Mappers;
 using GestionRapports.BLL.Models;
 using GestionsRapports.DAL.Interfaces;
+using Isopoh.Cryptography.Argon2;
 
 namespace GestionRapports.BLL.Services
 {
-    public class UserService(IUserRepository repo) : IUserService
+    public class UserService(IUserRepository repo, IAuthService authService) : IUserService
     {
         /// <summary>
         /// Retrieves a user from the database by ID.
@@ -50,6 +52,31 @@ namespace GestionRapports.BLL.Services
         public bool CheckUserExistance(string email)
         {
             return repo.CheckUserExistance(email);
+        }
+
+        /// <summary>
+        /// Authenticates the specified user and returns a login result containing the user details and a JWT token.
+        /// </summary>
+        /// <param name="user">The user object containing ID, Email and Password.</param>
+        /// <returns>
+        /// An object containing JWT token, 
+        /// </returns>
+        public LoginResult Login(User user)
+        {
+            User? foundUser = repo.GetUserByEmail(user.Email)?.ToModel();
+
+            if (foundUser != null && foundUser.Password != null && Argon2.Verify(foundUser.Password, user.Password))
+            {
+                string token = authService.GenerateToken(foundUser);
+
+                return new LoginResult
+                {
+                    Token = token,
+                    User = foundUser
+                };
+            }
+
+            throw new CredentialException("E-mail ou mot de passe incorrect.");
         }
     }
 }

@@ -36,5 +36,14 @@ namespace GestionRapports.BLL.Interfaces
         /// <param name="id">Email to check.</param>
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(string email);
+
+        /// <summary>
+        /// Authenticates the specified user and returns a login result containing the user details and a JWT token.
+        /// </summary>
+        /// <param name="user">The user object containing ID, Email and Password.</param>
+        /// <returns>
+        /// An object containing JWT token, 
+        /// </returns>
+        public LoginResult Login(User user);
     }
 }

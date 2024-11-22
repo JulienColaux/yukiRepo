@@ -13,16 +13,30 @@ namespace GestionRapports.API.Mappers
             {
                 User_Id = u.User_Id,
                 Email = u.Email,
-                MotsDePasse = u.MotsDePasse
-                
+                Password = u.Password,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
+                Role = u.Role,
+                Phone = u.Phone,
+
             };
         }
+
+
         public static Models.User Tomodels(this UserForm u)
         {
             return new Models.User
             {
                 Email = u.Email,
-                MotsDePasse = u.MotsDePasse
+                Password = u.MotsDePasse
+            };
+        }
+        public static Models.User ToModel(this UserLoginForm u)
+        {
+            return new Models.User
+            {
+                Email = u.Email,
+                Password = u.MotsDePasse
             };
         }
     }

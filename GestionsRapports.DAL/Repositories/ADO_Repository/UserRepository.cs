@@ -7,11 +7,20 @@ using Dapper;
 using GestionsRapports.DAL.Entities;
 using GestionsRapports.DAL.Interfaces;
 using Microsoft.Data.SqlClient;
+using Npgsql;
 
 namespace GestionsRapports.DAL.Repositories.ADO_Repository
 {
-    public class UserRepository(SqlConnection connection) : IUserRepository
+    public class UserRepository : IUserRepository
     {
+        private readonly NpgsqlConnection  connection;
+
+        // Constructeur pour initialiser la connexion
+        public UserRepository(string connectionString)
+        {
+            connection = new NpgsqlConnection (connectionString);
+        }
+
 
         /// <summary>
         /// Retrieves a user from the database by ID.
@@ -20,8 +29,21 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserById(int id)
         {
-            return connection.QueryFirst<User>("SELECT * FROM [dbo].[Users] WHERE User_Id = @Id", new { id });
+            var user = connection.QueryFirstOrDefault<User>(
+                "SELECT " +
+                "id_utilisateur AS User_Id, " +
+                "prenom AS Firstname, " +
+                "nom AS Lastname, " +
+                "mail AS Email, " +
+                "numerotelephone AS Phone, " +
+                "motdepasse AS Password, " +
+                "profil AS Role " +
+                "FROM utilisateur WHERE id_utilisateur = @Id", 
+                new { id });
+
+            return user;
         }
+
 
         /// <summary>
         /// Retrieves a user from the database by Email.
@@ -30,7 +52,19 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserByEmail(string email)
         {
-            return connection.QueryFirst<User>("SELECT * FROM [dbo].[Users] WHERE Email = @Email", new { email });
+            var user = connection.QueryFirstOrDefault<User>(
+                "SELECT " +
+                "id_utilisateur AS User_Id, " +
+                "prenom AS Firstname, " +
+                "nom AS Lastname, " +
+                "mail AS Email, " +
+                "numerotelephone AS Phone, " +
+                "motdepasse AS Password, " +
+                "profil AS Role " +
+                "FROM utilisateur WHERE mail = @email", 
+                new { email });
+
+            return user;
         }
 
 
@@ -41,7 +75,7 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(int id)
         {
-            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM [dbo].[Users] WHERE User_Id = @Id", new { id });
+            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM \"utilisateur\" WHERE \"id_utilisateur\" = @Id", new { id });
         }
 
         /// <summary>
@@ -51,7 +85,7 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(string email)
         {
-            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM [dbo].[Users] WHERE Email = @Email", new { email });
+            return 1 <= connection.ExecuteScalar<int>("SELECT COUNT(*) FROM \"utilisateur\" WHERE \"mail\" = @Email", new { email });
         }
     }
 }
