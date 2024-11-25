@@ -1,11 +1,73 @@
-<form id="loginForm" (ngSubmit)="login(email, password)">
-    <div>
-        <input type="email" name="email" [(ngModel)]="email" placeholder="Entrez votre email" required>
-    </div>
 
-    <div>
-        <input type="password" name="password" [(ngModel)]="password" placeholder="Entrez votre mot de passe" required>
-    </div>
+<div id="all">
 
-    <button type="submit">Se connecter</button>
+<div id="logo">
+  <img src="images/logoSansNom.png" alt="Logo de l'entreprise Eco-Conseil">
+</div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="flex flex-column md:flex-row">
+    <!-- Section de connexion -->
+    <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center  gap-3 py-5">
+      <!-- Champ Email -->
+      <div id="cadre" class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label for="email" class="w-6rem"></label>
+        <input
+        pInputText
+        id="email"
+        type="text"
+        class="w-12rem"
+        formControlName="email"
+        placeholder="     Adresse E-mail"
+        />
+      </div>
+      
+      <!-- Messages d'erreur pour l'Email -->
+      <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="p-error">
+        <small *ngIf="loginForm.get('email')?.hasError('required')">
+          L'email est requis.
+        </small>
+        <small *ngIf="loginForm.get('email')?.hasError('email')">
+          Entrez un email valide.
+        </small>
+      </div>
+      
+      <!-- Champ Mot de passe -->
+      <div id="cadre" class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label for="MotsDePasse" class="w-6rem"></label>
+        <input
+        pInputText
+        id="MotsDePasse"
+        type="password"
+        class="w-12rem"
+        formControlName="password"
+        placeholder="       Mot de passe"
+        />
+    </div>
+    
+    <!-- Messages d'erreur pour le Mot de passe -->
+    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="p-error">
+      <small *ngIf="loginForm.get('password')?.hasError('required')">
+        Le mot de passe est requis.
+      </small>
+      <small *ngIf="loginForm.get('password')?.hasError('minlength')">
+        Le mot de passe doit contenir au moins 6 caractères.
+      </small>
+    </div>
+    
+    <!-- Bouton Login -->
+    <div>
+      <p-button
+      label="Login"
+      icon="pi pi-user"
+      styleClass="w-10rem mx-auto"
+      type="submit"
+      iconPos="right"
+      severity="success"
+      [disabled]="loginForm.invalid"
+      ></p-button>
+    </div>
+  </div>
 </form>
+</div>
+
+

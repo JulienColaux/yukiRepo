@@ -1,0 +1,106 @@
+/* Style général */
+#all {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  /* Style du logo */
+  #logo {
+    text-align: center;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  #logo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style du formulaire */
+  form {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+  }
+  
+  /* Style du conteneur des inputs */
+  .flex.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Style des cadres d'input */
+  #cadre {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style des inputs */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Style des messages d'erreur */
+  .p-error {
+    color: #f44336;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .p-error small {
+    display: block;
+    margin-top: 0.25rem;
+  }
+  
+  /* Style du conteneur du bouton */
+  div:has(> p-button) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    #all {
+      padding: 1rem;
+    }
+  
+    form {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    #logo {
+      max-width: 150px;
+    }
+    
+    #cadre {
+      padding: 0.5rem;
+    }
+  }

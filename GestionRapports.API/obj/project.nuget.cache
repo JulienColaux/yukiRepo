@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "RoLJ6xfMWnQ=",
+=======
   "dgSpecHash": "VCZd1WISvtk=",
+>>>>>>> develop
   "success": true,
   "projectFilePath": "C:\\Users\\Student\\Documents\\GestionRapports\\GestionRapports.API\\GestionRapports.API.csproj",
   "expectedPackageFiles": [

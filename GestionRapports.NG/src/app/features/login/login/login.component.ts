@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { User } from '../../../core/models/user';
 import { LoginService } from '../../../core/services/login.service';
 import { Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UserLogin} from '../../../core/models/userLogin';
 
 @Component({
   selector: 'app-login',
@@ -13,33 +15,47 @@ import { Router } from '@angular/router';
 
 export class LoginComponent {
 
-  email: string = '';
-  password: string = '';
-
-  constructor(private loginService: LoginService, private route: Router) { }
+  errorMessage: string = '';
+  loginForm!: FormGroup;
 
 
-  //  If the user is found and the password matches, the user is redirected to the home page.
-  //  If the password is incorrect or the user doesn't exist, an error message is logged.
-  //  In case of a retrieval error, an error is logged.
+  constructor(
+    private loginService: LoginService,
+    private route: Router,
+    private fb: FormBuilder) { }
 
-  login(email: string, password: string): void {
-    this.loginService.getUserByEmail(email).subscribe({
-      next: (user) => {
-        if (user) {
-          if (user.password === password) {
-            console.log('Connexion réussie');
-            this.route.navigate(['/home'])
-          } else {
-            console.error('Mot de passe incorrect');
-          }
-        } else {
-          console.error('Utilisateur non trouvé');
-        }
-      },
-      error: (err) => {
-        console.error('Erreur lors de la récupération de l\'utilisateur:', err);
-      }
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
+  }
+
+
+  login(): void {
+    if (this.loginForm.valid) {
+      const userData = {
+        email: this.loginForm.value.email,
+        MotsDePasse: this.loginForm.value.password
+      };
+
+      console.log(userData);
+      this.loginService.login(userData).subscribe({
+        next: (response) => {
+          console.log(response);
+          this.loginService.setToken(response.token);
+          localStorage.setItem('userId', response.userId);
+          this.route.navigate(['/home']);
+        },
+        error: (error) => {
+          console.error('Login error:', error);
+          this.errorMessage = 'Email ou mot de passe incorrect.';
+        }
+      });
+    }
+    else {
+      console.error('Form invalid');
+    }
   }
 }
