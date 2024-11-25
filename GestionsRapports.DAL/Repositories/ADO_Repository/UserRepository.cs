@@ -79,6 +79,27 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
         }
 
         /// <summary>
+        /// Edit the profil of the user by the ID
+        /// </summary>
+        /// <param name="id">ID to find the user.</param>
+        /// <returns>Update the profil of the user or not.</returns>
+        public string editRole(int id, string roleValue)
+        {
+            try
+            {
+                var sql = "UPDATE utilisateur SET profil = @roleValue WHERE id_utilisateur = @id";
+
+                _connection.Execute(sql, new { id = id, roleValue = roleValue });
+
+                return roleValue;
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+            
+         /// </summary>  
         /// Retrieves a user from the database by Email.
         /// </summary>
         public IEnumerable<User> GetUsers()
@@ -121,6 +142,7 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
                 Profil = profil 
             });
         }
+        
 
         /// <summary>
         /// Checks whether a user exists in the database based on ID.

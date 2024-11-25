@@ -42,6 +42,14 @@ namespace GestionRapports.BLL.Interfaces
         /// <param name="id">ID to check.</param>
         /// <returns>True if the user exists; otherwise, false.</returns>
         public bool CheckUserExistance(int id);
+        
+        
+        /// <summary>
+        /// Edit the profil of the user by the ID
+        /// </summary>
+        /// <param name="id">ID to find the user.</param>
+        /// <returns>Update the profil of the user or not.</returns>
+        public string editRole(int id, string role);
 
         /// <summary>
         /// Checks whether a user exists in the database based on Email.

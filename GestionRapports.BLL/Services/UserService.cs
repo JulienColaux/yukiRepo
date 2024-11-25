@@ -78,6 +78,26 @@ namespace GestionRapports.BLL.Services
         }
 
         /// <summary>
+        /// Edit the profil of the user by the ID
+        /// </summary>
+        /// <param name="id">ID to find the user.</param>
+        /// <returns>Update the profil of the user or not.</returns>
+        public string editRole(int id, string role)
+        {
+            if (repo.GetUserById(id) == null)
+            {
+                new Exception("User not found.");
+            }
+
+            GestionsRapports.DAL.Entities.User userEntity = repo.GetUserById(id);
+            
+            
+            repo.editRole(id, role);
+
+            return role;
+        }
+
+        /// <summary>
         /// Checks whether a user exists in the database based on Email.
         /// </summary>
         /// <param name="id">Email to check.</param>

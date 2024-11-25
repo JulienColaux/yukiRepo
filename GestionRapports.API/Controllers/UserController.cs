@@ -127,6 +127,40 @@ namespace GestionRapports.API.Controllers
             }
         }
 
+        [HttpPost("editProfil")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public IActionResult editProfil([FromBody] editRoleForm profil)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                
+                User user = service.GetUserById(profil.UserId);
+                if (user == null)
+                {
+                    return NotFound($"Utilisateur avec l'ID {profil.UserId} non trouvé.");
+                }
+                
+                if (!Enum.IsDefined(typeof(Profil), profil.Profil))
+                {
+                    return BadRequest($"Le rôle '{profil.Profil}' n'est pas valide.");
+                }
+                
+                service.editRole(profil.UserId, profil.Profil.ToString());
+       
+
+                return Ok("Profil mis à jour avec succès.");
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Une erreur est survenue : {e.Message}");
+            }
+        }
+        
         [HttpGet("GetAllUsers")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<UserDTO>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
