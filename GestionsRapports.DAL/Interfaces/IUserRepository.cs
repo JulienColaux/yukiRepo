@@ -33,6 +33,10 @@ namespace GestionsRapports.DAL.Interfaces
         /// <returns>The user object if found; otherwise, null.</returns>
         public User GetUserByEmail(string email);
         
+        /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        public IEnumerable<User> GetUsers();
         
 
         /// <summary>

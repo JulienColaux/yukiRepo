@@ -16,6 +16,14 @@ namespace GestionRapports.BLL.Services
     {
         
         /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        public IEnumerable<User> GetAllUsers()
+        {
+            return repo.GetUsers().Select(u => u.ToModel());
+        }
+
+        /// <summary>
         /// Retrieves a user from the database by ID.
         /// </summary>
         /// <param name="id">ID to retrieve.</param>

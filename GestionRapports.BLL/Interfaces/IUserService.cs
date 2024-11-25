@@ -17,6 +17,12 @@ namespace GestionRapports.BLL.Interfaces
         
         
         /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        public IEnumerable<User> GetAllUsers();
+        
+        
+        /// <summary>
         /// Retrieves a user from the database by ID.
         /// </summary>
         /// <param name="id">ID to retrieve.</param>

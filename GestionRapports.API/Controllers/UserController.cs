@@ -126,5 +126,28 @@ namespace GestionRapports.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("GetAllUsers")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<UserDTO>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public IActionResult GetAllUsers()
+        {
+            try
+            {
+                var users = service.GetAllUsers();
+
+                if (users == null || !users.Any())
+                {
+                    return Ok("No users found."); 
+                }
+
+                return Ok(users); 
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"An error occurred while retrieving users: {e.Message}");
+            }
+        }
+
     }
 }

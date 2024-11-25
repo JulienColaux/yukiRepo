@@ -78,6 +78,25 @@ namespace GestionsRapports.DAL.Repositories.ADO_Repository
             return user;
         }
 
+        /// <summary>
+        /// Retrieves a user from the database by Email.
+        /// </summary>
+        public IEnumerable<User> GetUsers()
+        {
+            var sql = "SELECT " +
+                "id_utilisateur AS User_Id, " +
+                "prenom AS Firstname, " +
+                "nom AS Lastname, " +
+                "mail AS Email, " +
+                "numerotelephone AS Phone, " +
+                "motdepasse AS Password, " +
+                "profil AS Profil " + 
+                "FROM utilisateur";
+            
+            return _connection.Query<User>(sql);
+
+        }
+
 
         public User CreateUser(User user, string profil)
         {
