@@ -1,10 +1,10 @@
 export interface User {
-    id_User?: number;
-    firstName?: string;
-    lastName?: string;
+    User_Id?: number;
+    Firstname?: string;
+    Lastname?: string;
     email: string;
-    role?: string;
+    profil?: string;
     isAdmin?: boolean;
-    password: string
+    Password: string;
+    Phone: string;
 }
-//Be carefull! almost all the arguments are nullable for testing

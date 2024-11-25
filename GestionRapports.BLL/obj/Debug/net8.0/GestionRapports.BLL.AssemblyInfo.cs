@@ -22,6 +22,9 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da5c7214c3589b4635ffa1c3294e80708ebaf322")]
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57339e28a6f261a69e4ca8d3547ba7311827a277")]
 =======
@@ -30,6 +33,7 @@ using System.Reflection;
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57339e28a6f261a69e4ca8d3547ba7311827a277")]
 >>>>>>> deb17252de32fcb5f7b7866f59c33d1879b81ac0
+>>>>>>> develop
 [assembly: System.Reflection.AssemblyProductAttribute("GestionRapports.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionRapports.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
