@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { CheckReportService } from '../../../core/services/check-report.service';
 import { InfoReport } from '../../../core/models/info-report';
+import { CheckReportService } from '../../../core/services/check-report.service';
 
 @Component({
     selector: 'app-check-report',
@@ -78,3 +78,4 @@ export class CheckReportComponent implements OnInit {
         }
     }
 }
+

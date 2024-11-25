@@ -20,7 +20,7 @@ import { CheckReportModule } from './features/check-report/check-report.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#all {
+    /* Définir l'image de fond */
+    background-image: url('/images/backG2.jpg'); /* Remplacer par le chemin de l'image que tu veux */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#logo {
+    width: 250px; /* Ajuste la taille du logo comme tu veux */
+    margin-bottom: 40px; /* Espace entre le logo et les boutons */
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les boutons */
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(68, 177, 68); /* Changement de couleur au survol */
+}
