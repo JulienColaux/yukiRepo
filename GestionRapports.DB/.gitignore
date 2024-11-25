@@ -1,0 +1,28 @@
+# Ignorer les répertoires obj et bin dans tous les sous-dossiers
+**/obj/
+**/bin/
+
+# Ignorer les fichiers spécifiques à Rider et Visual Studio (non nécessaires)
+.idea/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Ignorer les fichiers NuGet et cache non nécessaires
+project.nuget.cache
+project.assets.json
+
+# Garder les fichiers nécessaires pour NuGet et la configuration de build
+!**/obj/**/GestionRapports.API.csproj.user
+!**/obj/**/GestionRapports.DB.sqlproj.user
+!**/obj/**/GestionRapports.DB.sqlproj
+!**/obj/**/GestionRapports.DB.jfm
+!**/obj/**/GestionRapports.MAP.csproj.nuget.g.targets
+!**/obj/**/GestionRapports.MAP.csproj.nuget.g.props
+!**/obj/**/GestionRapports.MAP.csproj.nuget.dgspec.json
+!**/obj/**/GestionRapports.DAL.csproj.nuget.dgspec.json
+!**/obj/**/GestionRapports.DAL.csproj.nuget.g.props
+!**/obj/**/GestionRapports.DAL.csproj.nuget.g.targets
+
+
