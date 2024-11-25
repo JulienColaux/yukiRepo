@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43a23d87-8614-4f50-ac46-46e3112260a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/GestionRapports.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/GestionRapports.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/GestionRapports.BLL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/GestionRapports.BLL.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.NG/src/app/core/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/src/app/core/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +28,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Rebasing feature/HomeFront",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
