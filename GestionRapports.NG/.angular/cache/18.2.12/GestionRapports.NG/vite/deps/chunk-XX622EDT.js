@@ -21,9 +21,6 @@ import {
   RippleModule
 } from "./chunk-LSFVCRE6.js";
 import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-JYTBBX7H.js";
-import {
   FilterService,
   ObjectUtils,
   OverlayService,
@@ -34,6 +31,9 @@ import {
   UniqueComponentId,
   zindexutils
 } from "./chunk-PI7TGDYY.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-JYTBBX7H.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -6554,4 +6554,4 @@ export {
   Dropdown,
   DropdownModule
 };
-//# sourceMappingURL=chunk-D4WTLMQZ.js.map
+//# sourceMappingURL=chunk-XX622EDT.js.map

@@ -11,13 +11,6 @@ import {
   ButtonModule
 } from "./chunk-2UF63UOQ.js";
 import {
-  DomSanitizer
-} from "./chunk-H6Y25Q2S.js";
-import {
-  HttpClient,
-  HttpEventType
-} from "./chunk-VSQRATKN.js";
-import {
   TimesIcon
 } from "./chunk-6MDE35J7.js";
 import "./chunk-UKJZA4IS.js";
@@ -27,6 +20,13 @@ import {
   Ripple,
   RippleModule
 } from "./chunk-LSFVCRE6.js";
+import {
+  DomSanitizer
+} from "./chunk-H6Y25Q2S.js";
+import {
+  HttpClient,
+  HttpEventType
+} from "./chunk-VSQRATKN.js";
 import {
   PrimeNGConfig,
   PrimeTemplate,
