@@ -13,9 +13,10 @@ import { MessagesModule } from 'primeng/messages';
 import { LoginModule } from './features/login/login.module';
 import { HomeModule } from './features/home/home.module';
 import { LoginService } from './core/services/login.service';
-import { HttpClientModule } from '@angular/common/http';
 import { AddReportModule } from './features/add-report/add-report.module';
 import { CheckReportModule } from './features/check-report/check-report.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AddUserModule } from './features/add-user/add-user.module';
 
 
 @NgModule({
@@ -33,9 +34,10 @@ import { CheckReportModule } from './features/check-report/check-report.module';
     MessagesModule,
     LoginModule,
     HomeModule,
-    HttpClientModule,
     AddReportModule,
-    CheckReportModule
+    CheckReportModule,
+    HttpClientModule,
+    AddUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

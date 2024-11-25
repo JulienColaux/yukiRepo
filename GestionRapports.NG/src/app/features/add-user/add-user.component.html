@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="firstname">Prénom</label>
+    <input  [(ngModel)]="user.Firstname" name="firstname" required>
+  
+    <label for="lastname">Nom</label>
+    <input  [(ngModel)]="user.Lastname" name="lastname" required>
+
+    <label for="profil">Profil</label>
+    <input  [(ngModel)]="user.Profil" name="profil" required>
+
+    <label for="email">Email</label>
+    <input  [(ngModel)]="user.Email" name="email" required type="email">
+  
+    <label for="phone">Numéro de téléphone</label>
+    <input  [(ngModel)]="user.Profil" name="phone" >
+
+    <label for="password">Mot de passe</label>
+    <input  [(ngModel)]="user.Password" name="password" required type="password">
+  
+    <button type="submit">Ajouter l'utilisateur</button>
+    
+  </form>
+  
