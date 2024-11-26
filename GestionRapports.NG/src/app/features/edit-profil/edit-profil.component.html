@@ -1,0 +1,99 @@
+<!--<div class="page">-->
+<!--  <h1>Here is a list of every user with an account.</h1>-->
+
+<!--  <div *ngIf="notificationMessage" [ngClass]="{'notification-success': notificationType === 'success', 'notification-error': notificationType === 'error'}" class="notification">-->
+<!--    {{ notificationMessage }}-->
+<!--  </div>-->
+
+<!--  <div class="user_detail">-->
+<!--    <div *ngFor="let user of users">-->
+<!--      <div class="user">-->
+<!--        <div class="h6_button">-->
+<!--          <h6>User Details</h6>-->
+<!--          <button *ngIf="user.User_Id !== undefined" (click)="editUser(user.User_Id!)">Edit role</button>-->
+<!--          <button *ngIf="user.User_Id !== undefined" (click)="Delete(user.User_Id!)" style="background-color: red">Delete User</button>-->
+
+<!--        </div>-->
+<!--        <p><strong>Name :</strong> {{ user.Firstname }}  {{ user.Lastname }}</p>-->
+<!--        <p><strong>Email :</strong> {{ user.Email }}</p>-->
+<!--        <div class="role_select">-->
+
+<!--          <p><strong>Role :</strong> {{ user.ProfilName }}</p>-->
+<!--          <select *ngIf="editMode && selectedUserId === user.User_Id" [(ngModel)]="profil" name="role">-->
+<!--            <option value="" disabled>Select a role</option>-->
+<!--            <option value="user">User</option>-->
+<!--            <option value="admin">Admin</option>-->
+<!--            <option value="superadmin">Superadmin</option>-->
+<!--          </select>-->
+<!--        </div>-->
+
+<!--        <button (click)="confirmEdit(user.User_Id)" *ngIf="editMode && selectedUserId === user.User_Id" >Confirm</button>-->
+<!--        <button (click)="deleteUser(user.User_Id)" *ngIf="deleteMode && selectedUserId === user.User_Id">Confirm</button>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div *ngIf="users.length === 0">-->
+<!--      <p>There is no user.</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="page">
+    <h1>Here is a list of every user with an account.</h1>
+
+    <div *ngIf="notificationMessage" [ngClass]="{'notification-success': notificationType === 'success', 'notification-error': notificationType === 'error'}" class="notification">
+        {{ notificationMessage }}
+    </div>
+
+    <p-table [value]="users" class="p-datatable-striped p-datatable-sm" *ngIf="users.length > 0">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{ user.Firstname }} {{ user.Lastname }}</td>
+                <td>{{ user.Email }}</td>
+                <td>{{ user.ProfilName }}</td>
+                <td>
+                    <p-button *ngIf="user.User_Id !== undefined" label="Edit role" icon="pi pi-pencil" (click)="editUser(user.User_Id!)"></p-button>
+                    <p-button *ngIf="user.User_Id !== undefined" label="Delete User" icon="pi pi-trash" styleClass="p-button-danger" (click)="deleteUser(user.User_Id!)"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <div *ngIf="users.length === 0">
+        <p>No users found.</p>
+    </div>
+
+    <div *ngIf="editMode" class="p-dialog">
+        <h3>Edit Role</h3>
+
+        <p-dropdown class="dropdown_role"
+                [options]="roleOptions"
+                [(ngModel)]="profil"
+                placeholder="Select a role"
+                [style]="{'width':'250px'}">
+        </p-dropdown>
+
+        <p-button
+                label="Confirm"
+                icon="pi pi-check"
+                (click)="confirmEdit(selectedUserId!)">
+        </p-button>
+
+        <p-button
+                label="Cancel"
+                icon="pi pi-times"
+                (click)="cancelEdit()">
+        </p-button>
+    </div>
+
+</div>

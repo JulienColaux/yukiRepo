@@ -17,6 +17,7 @@ import { AddReportModule } from './features/add-report/add-report.module';
 import { CheckReportModule } from './features/check-report/check-report.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AddUserModule } from './features/add-user/add-user.module';
+import { EditProfilModule } from './features/edit-profil/edit-profil.module';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AddUserModule } from './features/add-user/add-user.module';
     AddReportModule,
     CheckReportModule,
     HttpClientModule,
-    AddUserModule
+    AddUserModule,
+    EditProfilModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

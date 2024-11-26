@@ -11,6 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4cf363c2-0c8e-4c93-81a0-f9d6892e49af" name="Changes" comment="">
 <<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/.idea.GestionRapports/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
@@ -37,14 +41,20 @@
       <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/project.nuget.cache" afterDir="false" />
 =======
+>>>>>>> develop
       <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.MAP/obj/Debug/net8.0/GestionRapports.MAP.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/GestionRapports.NG/src/app/features/edit-profil/edit-profil.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/src/app/features/edit-profil/edit-profil.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.NG/src/app/features/edit-profil/edit-profil.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/src/app/features/edit-profil/edit-profil.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionsRapports.DAL/obj/Debug/net8.0/GestionsRapports.DAL.AssemblyInfoInputs.cache" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/@angular_common_http.js" afterDir="false" />
@@ -102,6 +112,7 @@
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/primeng_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/primeng_table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/primeng_table.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/vite/deps/primeng_table.js.map" afterDir="false" />
 >>>>>>> develop
+>>>>>>> develop
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +149,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.GestionRapports.API: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/EditProfilUserFront&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Student/Documents/GestionRapports/GestionRapports.sln&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.GestionRapports.API: IIS Express.executor": "Run",
@@ -155,8 +181,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+>>>>>>> develop
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.GestionRapports.API: IIS Express">
     <configuration name="GestionRapports.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GestionRapports.API/GestionRapports.API.csproj" />

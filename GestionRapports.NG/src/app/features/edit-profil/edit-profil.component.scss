@@ -1,0 +1,105 @@
+
+.page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.notification {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.notification-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.notification-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.p-datatable-striped {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.p-datatable-striped th,
+.p-datatable-striped td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.p-datatable-striped th {
+  background-color: #f4f4f4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p-datatable-striped tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.p-button {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.p-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.p-dropdown {
+  width: 100% !important;
+  margin-bottom: 20px !important;
+  background-color: blue !important;
+}
+
+.p-dialog h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.p-button {
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.p-button-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.p-button-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+
+td {
+  font-size: 14px;
+  color: #555;
+}
