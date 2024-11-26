@@ -9,7 +9,16 @@
 *.user
 *.userosscache
 *.sln.docstates
-.idea/
+.idea/*
+
+# Ignorer les fichiers générés .NET
+**/obj/
+**/bin/
+
+# Ignorer les fichiers de cache Angular
+**/.angular/
+**/.tsbuildinfo
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
