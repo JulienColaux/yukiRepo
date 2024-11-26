@@ -1,9 +1,15 @@
+using System;
 using System.Text;
+using System.Threading.Tasks;
 using GestionRapports.BLL.Interfaces;
 using GestionRapports.BLL.Services;
 using GestionsRapports.DAL.Interfaces;
 using GestionsRapports.DAL.Repositories.ADO_Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 

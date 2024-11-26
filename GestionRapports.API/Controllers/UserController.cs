@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using GestionRapports.API.DTOs;
 using GestionRapports.API.Forms;
 using GestionRapports.API.Mappers;
@@ -5,6 +8,7 @@ using GestionRapports.BLL.Exceptions;
 using GestionRapports.BLL.Interfaces;
 using GestionRapports.BLL.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestionRapports.API.Controllers

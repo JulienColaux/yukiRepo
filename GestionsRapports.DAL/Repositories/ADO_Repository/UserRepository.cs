@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Common;
 using Dapper;
 using GestionsRapports.DAL.Entities;
