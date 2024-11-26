@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43a23d87-8614-4f50-ac46-46e3112260a2" name="Changes" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.API/obj/Debug/net8.0/GestionRapports.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.BLL/obj/Debug/net8.0/GestionRapports.BLL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionRapports.NG/src/app/core/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/src/app/core/models/user.ts" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.angular/cache/18.2.12/GestionRapports.NG/.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionRapports.NG/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GestionRapports.NG/.gitignore" afterDir="false" />
+>>>>>>> develop
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +39,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
+    "git-widget-placeholder": "feature/HomeFront",
+=======
     "git-widget-placeholder": "develop",
+>>>>>>> develop
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
