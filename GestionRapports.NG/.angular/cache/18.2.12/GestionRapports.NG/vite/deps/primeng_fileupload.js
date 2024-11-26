@@ -1,22 +1,11 @@
 import {
   Messages,
   MessagesModule
-} from "./chunk-J3RTNQXZ.js";
+} from "./chunk-TICTCCHP.js";
 import {
   PlusIcon
 } from "./chunk-DG2FLGF2.js";
 import "./chunk-B2FJVPV6.js";
-import {
-  TimesIcon
-} from "./chunk-VO7JXUBL.js";
-import "./chunk-ZMGMXQYL.js";
-import {
-  DomSanitizer
-} from "./chunk-H6Y25Q2S.js";
-import {
-  HttpClient,
-  HttpEventType
-} from "./chunk-VSQRATKN.js";
 import {
   Button,
   ButtonDirective,
@@ -24,11 +13,15 @@ import {
 } from "./chunk-GXJKFYEC.js";
 import "./chunk-P7EOBTHQ.js";
 import {
+  TimesIcon
+} from "./chunk-VO7JXUBL.js";
+import {
   BaseIcon,
   DomHandler,
   Ripple,
   RippleModule
 } from "./chunk-N2GTAIP5.js";
+import "./chunk-ZMGMXQYL.js";
 import {
   PrimeNGConfig,
   PrimeTemplate,
@@ -36,6 +29,13 @@ import {
   TranslationKeys,
   UniqueComponentId
 } from "./chunk-VKLOYN3N.js";
+import {
+  DomSanitizer
+} from "./chunk-H6Y25Q2S.js";
+import {
+  HttpClient,
+  HttpEventType
+} from "./chunk-VSQRATKN.js";
 import {
   CommonModule,
   DOCUMENT,
